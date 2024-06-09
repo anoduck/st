@@ -1,0 +1,9 @@
+@@ -2203,6 +2316,8 @@
+ 
+ 	setlocale(LC_CTYPE, "");
+ 	XSetLocaleModifiers("");
++	xrdb_load();
++	signal(SIGUSR1, reload);
+ 	cols = MAX(cols, 1);
+ 	rows = MAX(rows, 1);
+ 	tnew(cols, rows);
